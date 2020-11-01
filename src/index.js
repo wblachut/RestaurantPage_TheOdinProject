@@ -1,4 +1,3 @@
-
 document.body.onload = addBaseElements;
 
 function addBaseElements() {
@@ -58,7 +57,13 @@ function addBaseElements() {
   containerDiv = document.createElement('div');
   containerDiv.id = 'container';
   mainDiv.appendChild(containerDiv);
-  switchToContact();
+
+  nbHome.addEventListener('click', switchToHome)
+  nbMenu.addEventListener('click', switchToMenu)
+  nbGallery.addEventListener('click', switchToGallery)
+  nbContact.addEventListener('click', switchToContact)
+
+  switchToMenu();
 }
 
 
@@ -77,6 +82,8 @@ function switchToHome() {
   pHome = document.createElement('p');
   pHome.textContent = 'Quisque at justo pretium, volutpat quam eget, auctor purus. In imperdiet nibh arcu, a suscipit lorem eleifend non. Cras sollicitudin pellentesque fermentum. Pellentesque vitae erat purus. Sed consequat velit mi, a sollicitudin nisi semper ac. Suspendisse potenti. Proin sagittis magna vel pulvinar sagittis.';
   sectionHome.appendChild(pHome);
+
+  // pHome = pHome + `img <src=""`
 }///////////////////////////////////////////////////////////
 
 function switchToMenu() {
@@ -88,7 +95,7 @@ function switchToMenu() {
   containerDiv.appendChild(sectionMenu);
 
   menuName = document.createElement('div');
-  menuName.textContent = 'MENU';
+  menuName.textContent = 'Menu';
   menuName.id = 'menu-name-div';
   sectionMenu.appendChild(menuName);
 
@@ -99,8 +106,9 @@ function switchToMenu() {
   menuList = document.createElement('ul');
   menuList.id = 'menu-list';
   menuList.innerHTML =
-`<ul class="menu-course">
+`
 <img id="img-one" src="/files/seed_green.png"></img>
+<ul class="menu-course">
   <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 € </li>
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span></li></ul>
 <ul class="menu-course">
@@ -129,10 +137,13 @@ function switchToGallery() {
   sectionGallery.id = 'gallery';
   containerDiv.appendChild(sectionGallery);
 
+  galleryBg = document.createElement('div');
+  galleryBg.id = 'gallery-background';
+  sectionGallery.appendChild(galleryBg);
+
   galleryName = document.createElement('div');
   galleryName.id = 'gallery-name-div';
-  galleryName.textContent = 'Gallery';
-  sectionGallery.appendChild(galleryName);
+  galleryBg.appendChild(galleryName);
 
   galleryContent = document.createElement('div');
   galleryContent.id = 'gallery-content-div';
@@ -143,7 +154,7 @@ function switchToGallery() {
   <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fall-dinner-ideas-cassuoulet2-1576965198.jpg?crop=1xw:1xh;center,top&resize=480:*">
   <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fall-dinner-ideas-coq-au-vin-rose-ghk-1219-1576859402.jpg">
   <img src="https://images.unsplash.com/photo-1544681280-d25a782adc9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1936&q=80">`
-  sectionGallery.appendChild(galleryContent);
+  galleryBg.appendChild(galleryContent);
 }////////////////////////////////////////////////////////////
 
 function switchToContact() {
@@ -159,7 +170,7 @@ function switchToContact() {
   contactDiv.innerHTML =
    `<div><h1> Visit us </h1>
    <p> Smiling Pumpkin Sq. 87, </p>
-   <p>20-77, Novigrad </p><p>   </p></div>
+   <p>20-77, Novigrad </p></div>
    <div><h1> Call us to make an order ! </h1>
    <p><img src="/files/phone.png" class="icon"> +48 18 05 2015  </p></div>
    <div id="social-media-container">
@@ -168,10 +179,7 @@ function switchToContact() {
       <a href="#" tag="fb" ><p>Instagram</p> <img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg"></a>
       <a href="#" tag="fb" ><p>TripAdvisor</p> <img src="https://www.flaticon.com/premium-icon/icons/svg/2504/2504944.svg"></a></section></div>`
   sectionContact.appendChild(contactDiv);
-
-
-
-}
+}////////////////////////////////////////////////////////////
 
 
 
