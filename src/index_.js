@@ -1,9 +1,15 @@
 import { addBaseElements } from './addBaseElements'
-import { goToHome } from './switchTabbs'
-import { goToMenu } from './switchTabbs'
-import { goToGallery } from './switchTabbs'
-import { goToContact } from './switchTabbs'
+import { switchToHome, switchToMenu, switchToGallery, switchToContact, removeContainerContent } from './switchTabbs'
+// import * as ...(?) from './switchTabbs'
 
 document.body.onload = addBaseElements;
-  // document.querySelector   
 
+nbHome.addEventListener('click', switchToHome)
+nbMenu.addEventListener('click', switchToMenu)
+nbGallery.addEventListener('click', switchToGallery)
+nbContact.addEventListener('click', switchToContact)
+toggleMenu.addEventListener('click', toggleLinkMenu)
+switchToHome();
+function toggleLinkMenu() {
+  navBarUl.classList.toggle('active')
+}

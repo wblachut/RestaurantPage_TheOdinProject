@@ -151,6 +151,10 @@ function switchToGallery() {
   galleryBg.id = 'gallery-background';
   sectionGallery.appendChild(galleryBg);
 
+  galleryName = document.createElement('div');
+  galleryName.id = 'gallery-name-div';
+  galleryBg.appendChild(galleryName);
+
   galleryContent = document.createElement('div');
   galleryContent.id = 'gallery-content-div';
   galleryContent.innerHTML =
@@ -181,11 +185,14 @@ function switchToContact() {
    <p><img src="/files/phone.png" class="icon"> +48 18 05 2015  </p></div>
    <div id="social-media-container">
    <h1> You can find us on </h1><section id="social-medias">
-      <a href="#" alt="fb" ><p>Facebook</p> <img src="https://www.flaticon.com/svg/static/icons/svg/733/733547.svg"></a>
-      <a href="#" alt="fb" ><p>Instagram</p> <img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg"></a>
-      <a href="#" alt="fb" ><p>TripAdvisor</p> <img src="https://www.flaticon.com/premium-icon/icons/svg/2504/2504944.svg"></a></section></div>`
+      <a href="#" tag="fb" ><p>Facebook</p> <img src="https://www.flaticon.com/svg/static/icons/svg/733/733547.svg"></a>
+      <a href="#" tag="fb" ><p>Instagram</p> <img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg"></a>
+      <a href="#" tag="fb" ><p>TripAdvisor</p> <img src="https://www.flaticon.com/premium-icon/icons/svg/2504/2504944.svg"></a></section></div>`
   sectionContact.appendChild(contactDiv);
 }////////////////////////////////////////////////////////////
+
+
+
 
 
 function removeContainerContent() {

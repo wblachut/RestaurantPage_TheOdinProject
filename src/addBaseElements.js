@@ -66,7 +66,7 @@ function addBaseElements() {
     navBarUl.classList.toggle('active')
   }
 
-  switchToHome();
+  // switchToHome();
 
   // return {nbHome, nbMenu, nbGallery, nbContact, toggleMenu}
 
