@@ -1,8 +1,8 @@
 import { addBaseElements } from './addBaseElements'
-import { goToHome } from './goToTab'
-import { goToMenu } from './goToTab'
-import { goToGallery } from './goToTab'
-import { goToContact } from './goToTab'
+import { goToHome } from './switchTabbs'
+import { goToMenu } from './switchTabbs'
+import { goToGallery } from './switchTabbs'
+import { goToContact } from './switchTabbs'
 
 document.body.onload = addBaseElements;
   // document.querySelector   
