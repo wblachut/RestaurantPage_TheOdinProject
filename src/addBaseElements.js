@@ -1,13 +1,13 @@
 function addBaseElements() {
   console.log("addBaseElements");
   mainDiv = document.getElementById('main');
-  sectionTop = document.createElement('section');
-  sectionTop.id = 'top';
-  mainDiv.appendChild(sectionTop);
+  navbar = document.createElement('nav');
+  navbar.id = 'navbar';
+  mainDiv.appendChild(navbar);
 
   navBarDiv = document.createElement('div');
   navBarDiv.id = 'nav-bar';
-  sectionTop.appendChild(navBarDiv);
+  navbar.appendChild(navBarDiv);
 
   logoDiv = document.createElement('div');
   logoDiv.id = 'logo-div';
@@ -24,7 +24,7 @@ function addBaseElements() {
 
   navBarUl = document.createElement('ul');
   navBarUl.id = 'navbar-ul';
-  sectionTop.appendChild(navBarUl);
+  navbar.appendChild(navBarUl);
 
   nbHome = document.createElement('li');
   nbHome.innerHTML = '<a href="#" >Home</a>';
@@ -50,22 +50,26 @@ function addBaseElements() {
   toggleMenu.setAttribute("href", "#");
   toggleMenu.id = 'toggle-menu';
   toggleMenu.innerHTML = '<span class="bar"></span> <span class="bar"></span> <span class="bar"></span>';
-  sectionTop.appendChild(toggleMenu);
+  navbar.appendChild(toggleMenu);
 
   containerDiv = document.createElement('div');
   containerDiv.id = 'container';
   mainDiv.appendChild(containerDiv);
 
-  // goToHome();
-  // logoDiv.addEventListener('click', goToHome);
-  // nbMenu.addEventListener('click', goToMenu);
-  // nbGallery.addEventListener('click', goToGallery)
-  // nbContact.addEventListener('click', goToContact)
+  nbHome.addEventListener('click', switchToHome)
+  nbMenu.addEventListener('click', switchToMenu)
+  nbGallery.addEventListener('click', switchToGallery)
+  nbContact.addEventListener('click', switchToContact)
+  toggleMenu.addEventListener('click', toggleLinkMenu)
+
+  function toggleLinkMenu() {
+    navBarUl.classList.toggle('active')
+  }
+
+  switchToHome();
+
+  // return {nbHome, nbMenu, nbGallery, nbContact, toggleMenu}
 
 }
 
-
-
-// import switchToHome etc...
-
-export default addBaseElements
+export default addBaseElements;

@@ -1,77 +1,3 @@
-document.body.onload = addBaseElements;
-
-function addBaseElements() {
-  console.log("addBaseElements");
-  mainDiv = document.getElementById('main');
-  navbar = document.createElement('nav');
-  navbar.id = 'navbar';
-  mainDiv.appendChild(navbar);
-
-  navBarDiv = document.createElement('div');
-  navBarDiv.id = 'nav-bar';
-  navbar.appendChild(navBarDiv);
-
-  logoDiv = document.createElement('div');
-  logoDiv.id = 'logo-div';
-  navBarDiv.appendChild(logoDiv);
-
-  titleDiv = document.createElement('div');
-  titleDiv.id = 'title-div';
-  titleDiv.innerHTML = "Fallin' to Meal";
-  logoDiv.appendChild(titleDiv);
-  subtitleDiv = document.createElement('div');
-  subtitleDiv.id = 'subtitle-div';
-  subtitleDiv.innerHTML = "Restaurant";
-  logoDiv.appendChild(subtitleDiv);
-
-  navBarUl = document.createElement('ul');
-  navBarUl.id = 'navbar-ul';
-  navbar.appendChild(navBarUl);
-
-  nbHome = document.createElement('li');
-  nbHome.innerHTML = '<a href="#" >Home</a>';
-  nbHome.id = 'nb-home';
-  navBarUl.appendChild(nbHome);
-
-  nbMenu = document.createElement('li');
-  nbMenu.innerHTML = '<a href="#">Menu</a>';
-  nbMenu.id = 'nb-menu';
-  navBarUl.appendChild(nbMenu);
-
-  nbGallery = document.createElement('li');
-  nbGallery.innerHTML = '<a href="#">Gallery</a>';
-  nbGallery.id = 'nb-gallery';
-  navBarUl.appendChild(nbGallery);
-
-  nbContact = document.createElement('li');
-  nbContact.innerHTML = '<a href="#">Contact</a>';
-  nbContact.id = 'nb-contact';
-  navBarUl.appendChild(nbContact);
-
-  toggleMenu = document.createElement('a');
-  toggleMenu.setAttribute("href", "#");
-  toggleMenu.id = 'toggle-menu';
-  toggleMenu.innerHTML = '<span class="bar"></span> <span class="bar"></span> <span class="bar"></span>';
-  navbar.appendChild(toggleMenu);
-
-  containerDiv = document.createElement('div');
-  containerDiv.id = 'container';
-  mainDiv.appendChild(containerDiv);
-
-  nbHome.addEventListener('click', switchToHome)
-  nbMenu.addEventListener('click', switchToMenu)
-  nbGallery.addEventListener('click', switchToGallery)
-  nbContact.addEventListener('click', switchToContact)
-  toggleMenu.addEventListener('click', toggleLinkMenu)
-
-  switchToHome();
-}
-
-function toggleLinkMenu() {
-  navBarUl.classList.toggle('active')
-}
-
-
 function switchToHome() {
   console.log('switchToHome');
   removeContainerContent();
@@ -91,10 +17,8 @@ function switchToHome() {
   imgHome = document.createElement('img');
   imgHome.src = '/files/pumpkin2.png';
   sectionHome.appendChild(imgHome);
+}
 
-
-  // pHome = pHome + `img <src=""`
-}///////////////////////////////////////////////////////////
 
 function switchToMenu() {
   console.log('switchToMenu');
@@ -116,8 +40,7 @@ function switchToMenu() {
   menuList = document.createElement('ul');
   menuList.id = 'menu-list';
   menuList.innerHTML =
-`
-<img id="img-one" src="/files/seed_green.png"></img>
+`<img id="img-one" src="/files/seed_green.png"></img>
 <ul class="menu-course">
   <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 € </li>
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span></li></ul>
@@ -137,7 +60,7 @@ function switchToMenu() {
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span><li></ul>
   <img id="img-two" src="/files/vegetables.png"></img>`;
   menuBackground.appendChild(menuList);
-}/////////////////////////////////////////////////////////////////////
+}
 
 function switchToGallery() {
   console.log('switchToGallery');
@@ -151,6 +74,10 @@ function switchToGallery() {
   galleryBg.id = 'gallery-background';
   sectionGallery.appendChild(galleryBg);
 
+  galleryName = document.createElement('div');
+  galleryName.id = 'gallery-name-div';
+  galleryBg.appendChild(galleryName);
+
   galleryContent = document.createElement('div');
   galleryContent.id = 'gallery-content-div';
   galleryContent.innerHTML =
@@ -161,7 +88,7 @@ function switchToGallery() {
   <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fall-dinner-ideas-coq-au-vin-rose-ghk-1219-1576859402.jpg">
   <img src="https://images.unsplash.com/photo-1544681280-d25a782adc9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1936&q=80">`
   galleryBg.appendChild(galleryContent);
-}////////////////////////////////////////////////////////////
+}
 
 function switchToContact() {
   console.log('switchToContact');
@@ -181,11 +108,11 @@ function switchToContact() {
    <p><img src="/files/phone.png" class="icon"> +48 18 05 2015  </p></div>
    <div id="social-media-container">
    <h1> You can find us on </h1><section id="social-medias">
-      <a href="#" alt="fb" ><p>Facebook</p> <img src="https://www.flaticon.com/svg/static/icons/svg/733/733547.svg"></a>
-      <a href="#" alt="fb" ><p>Instagram</p> <img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg"></a>
-      <a href="#" alt="fb" ><p>TripAdvisor</p> <img src="https://www.flaticon.com/premium-icon/icons/svg/2504/2504944.svg"></a></section></div>`
+      <a href="#" tag="fb" ><p>Facebook</p> <img src="https://www.flaticon.com/svg/static/icons/svg/733/733547.svg"></a>
+      <a href="#" tag="fb" ><p>Instagram</p> <img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg"></a>
+      <a href="#" tag="fb" ><p>TripAdvisor</p> <img src="https://www.flaticon.com/premium-icon/icons/svg/2504/2504944.svg"></a></section></div>`
   sectionContact.appendChild(contactDiv);
-}////////////////////////////////////////////////////////////
+}
 
 
 function removeContainerContent() {
@@ -193,5 +120,10 @@ function removeContainerContent() {
     containerDiv.removeChild(containerDiv.lastChild);
   }
 }
+
+
+export { switchToHome, switchToMenu, switchToGallery, switchToContact, removeContainerContent }; 
+
+
 
 
