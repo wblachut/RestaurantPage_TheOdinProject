@@ -3,13 +3,13 @@ document.body.onload = addBaseElements;
 function addBaseElements() {
   console.log("addBaseElements");
   mainDiv = document.getElementById('main');
-  sectionTop = document.createElement('section');
-  sectionTop.id = 'top';
-  mainDiv.appendChild(sectionTop);
+  navbar = document.createElement('nav');
+  navbar.id = 'navbar';
+  mainDiv.appendChild(navbar);
 
   navBarDiv = document.createElement('div');
   navBarDiv.id = 'nav-bar';
-  sectionTop.appendChild(navBarDiv);
+  navbar.appendChild(navBarDiv);
 
   logoDiv = document.createElement('div');
   logoDiv.id = 'logo-div';
@@ -26,7 +26,7 @@ function addBaseElements() {
 
   navBarUl = document.createElement('ul');
   navBarUl.id = 'navbar-ul';
-  sectionTop.appendChild(navBarUl);
+  navbar.appendChild(navBarUl);
 
   nbHome = document.createElement('li');
   nbHome.innerHTML = '<a href="#" >Home</a>';
@@ -52,7 +52,7 @@ function addBaseElements() {
   toggleMenu.setAttribute("href", "#");
   toggleMenu.id = 'toggle-menu';
   toggleMenu.innerHTML = '<span class="bar"></span> <span class="bar"></span> <span class="bar"></span>';
-  sectionTop.appendChild(toggleMenu);
+  navbar.appendChild(toggleMenu);
 
   containerDiv = document.createElement('div');
   containerDiv.id = 'container';
@@ -62,8 +62,13 @@ function addBaseElements() {
   nbMenu.addEventListener('click', switchToMenu)
   nbGallery.addEventListener('click', switchToGallery)
   nbContact.addEventListener('click', switchToContact)
+  toggleMenu.addEventListener('click', toggleLinkMenu)
 
-  switchToMenu();
+  switchToHome();
+}
+
+function toggleLinkMenu() {
+  navBarUl.classList.toggle('active')
 }
 
 
@@ -82,6 +87,11 @@ function switchToHome() {
   pHome = document.createElement('p');
   pHome.textContent = 'Quisque at justo pretium, volutpat quam eget, auctor purus. In imperdiet nibh arcu, a suscipit lorem eleifend non. Cras sollicitudin pellentesque fermentum. Pellentesque vitae erat purus. Sed consequat velit mi, a sollicitudin nisi semper ac. Suspendisse potenti. Proin sagittis magna vel pulvinar sagittis.';
   sectionHome.appendChild(pHome);
+
+  imgHome = document.createElement('img');
+  imgHome.src = '/files/pumpkin2.png';
+  sectionHome.appendChild(imgHome);
+
 
   // pHome = pHome + `img <src=""`
 }///////////////////////////////////////////////////////////
