@@ -79,6 +79,7 @@ nav {
   justify-content: space-between;
   width: 30px;
   height: 20px;
+  cursor: pointer;
   /* padding: 2%; */
 }
 
@@ -101,6 +102,7 @@ ul#navbar-ul {
   top: 30px;
   font-size: 1.7rem;
   font-family: rancho;
+  cursor: pointer;
 }
 
 ul#navbar-ul li a { 

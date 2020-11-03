@@ -28,27 +28,26 @@ function addBaseElements() {
   navbar.appendChild(navBarUl);
 
   const nbHome = document.createElement('li');
-  nbHome.innerHTML = '<a href="#" >Home</a>';
+  nbHome.innerHTML = '<a>Home</a>';
   nbHome.id = 'nb-home';
   navBarUl.appendChild(nbHome);
 
   const nbMenu = document.createElement('li');
-  nbMenu.innerHTML = '<a href="#">Menu</a>';
+  nbMenu.innerHTML = '<a>Menu</a>';
   nbMenu.id = 'nb-menu';
   navBarUl.appendChild(nbMenu);
 
   const nbGallery = document.createElement('li');
-  nbGallery.innerHTML = '<a href="#">Gallery</a>';
+  nbGallery.innerHTML = '<a>Gallery</a>';
   nbGallery.id = 'nb-gallery';
   navBarUl.appendChild(nbGallery);
 
   const nbContact = document.createElement('li');
-  nbContact.innerHTML = '<a href="#">Contact</a>';
+  nbContact.innerHTML = '<a>Contact</a>';
   nbContact.id = 'nb-contact';
   navBarUl.appendChild(nbContact);
 
   const toggleMenu = document.createElement('a');
-  toggleMenu.setAttribute("href", "#");
   toggleMenu.id = 'toggle-menu';
   toggleMenu.innerHTML = '<span class="bar"></span> <span class="bar"></span> <span class="bar"></span>';
   navbar.appendChild(toggleMenu);
