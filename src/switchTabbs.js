@@ -1,43 +1,41 @@
 function switchToHome() {
-  console.log('switchToHome');
   removeContainerContent();
-  containerDiv = document.getElementById('container');
-  sectionHome = document.createElement('section');
+  const containerDiv = document.getElementById('container');
+  const sectionHome = document.createElement('section');
   sectionHome.id = 'home';
   containerDiv.appendChild(sectionHome);
 
-  h1Home = document.createElement('h1');
+  const h1Home = document.createElement('h1');
   h1Home.textContent = `Fallin' to Meal Presents`;
   sectionHome.appendChild(h1Home);
 
-  pHome = document.createElement('p');
+  const pHome = document.createElement('p');
   pHome.textContent = 'Quisque at justo pretium, volutpat quam eget, auctor purus. In imperdiet nibh arcu, a suscipit lorem eleifend non. Cras sollicitudin pellentesque fermentum. Pellentesque vitae erat purus. Sed consequat velit mi, a sollicitudin nisi semper ac. Suspendisse potenti. Proin sagittis magna vel pulvinar sagittis.';
   sectionHome.appendChild(pHome);
 
-  imgHome = document.createElement('img');
+  const imgHome = document.createElement('img');
   imgHome.src = '/files/pumpkin2.png';
   sectionHome.appendChild(imgHome);
 }
 
 
 function switchToMenu() {
-  console.log('switchToMenu');
   removeContainerContent();
-  containerDiv = document.getElementById('container');
-  sectionMenu = document.createElement('section');
+  const containerDiv = document.getElementById('container');
+  const sectionMenu = document.createElement('section');
   sectionMenu.id = 'menu';
   containerDiv.appendChild(sectionMenu);
 
-  menuName = document.createElement('div');
+  const menuName = document.createElement('div');
   menuName.textContent = 'Menu';
   menuName.id = 'menu-name-div';
   sectionMenu.appendChild(menuName);
 
-  menuBackground = document.createElement('div');
+  const menuBackground = document.createElement('div');
   menuBackground.id = 'menu-bckgd';
   sectionMenu.appendChild(menuBackground);
 
-  menuList = document.createElement('ul');
+  const menuList = document.createElement('ul');
   menuList.id = 'menu-list';
   menuList.innerHTML =
 `<img id="img-one" src="/files/seed_green.png"></img>
@@ -63,22 +61,21 @@ function switchToMenu() {
 }
 
 function switchToGallery() {
-  console.log('switchToGallery');
   removeContainerContent();
-  containerDiv = document.getElementById('container');
-  sectionGallery = document.createElement('section');
+  const containerDiv = document.getElementById('container');
+  const sectionGallery = document.createElement('section');
   sectionGallery.id = 'gallery';
   containerDiv.appendChild(sectionGallery);
 
-  galleryBg = document.createElement('div');
+  const galleryBg = document.createElement('div');
   galleryBg.id = 'gallery-background';
   sectionGallery.appendChild(galleryBg);
 
-  galleryName = document.createElement('div');
+  const galleryName = document.createElement('div');
   galleryName.id = 'gallery-name-div';
   galleryBg.appendChild(galleryName);
 
-  galleryContent = document.createElement('div');
+  const galleryContent = document.createElement('div');
   galleryContent.id = 'gallery-content-div';
   galleryContent.innerHTML =
   `<img src="https://assets.epicurious.com/photos/5c7d6ee0d6c37575ccdd79c3/16:9/w_1600%2Cc_limit/SMALL-PLATES-Chickpea-Flatbread-recipe-27022019.jpg">
@@ -91,14 +88,13 @@ function switchToGallery() {
 }
 
 function switchToContact() {
-  console.log('switchToContact');
   removeContainerContent();
-  containerDiv = document.getElementById('container');
-  sectionContact = document.createElement('section');
+  const containerDiv = document.getElementById('container');
+  const sectionContact = document.createElement('section');
   sectionContact.id = 'contact';
   containerDiv.appendChild(sectionContact);
 
-  contactDiv = document.createElement('div');
+  const contactDiv = document.createElement('div');
   contactDiv.id = 'contact-div';
   contactDiv.innerHTML =
    `<div><h1> Visit us </h1>
@@ -114,13 +110,12 @@ function switchToContact() {
   sectionContact.appendChild(contactDiv);
 }
 
-
 function removeContainerContent() {
+  const containerDiv = document.getElementById('container');
   while (containerDiv.firstChild)  {
     containerDiv.removeChild(containerDiv.lastChild);
   }
 }
-
 
 export { switchToHome, switchToMenu, switchToGallery, switchToContact, removeContainerContent }; 
 

@@ -1,3 +1,6 @@
-import addBaseElements from './addBaseElements'
+import addBaseElements from './addBaseElements';
 
 document.body.onload = addBaseElements;
+
+
+
