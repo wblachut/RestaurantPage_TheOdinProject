@@ -21,7 +21,7 @@ This is a first `The Odin Project` webpage build with application of webpack. Th
 * page responsiveness
 
 
-# Tools:
+## Tools:
 
 * Visual Studio Code
 * Javascript
