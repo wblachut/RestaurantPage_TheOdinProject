@@ -1,9 +1,3 @@
-:root {
-  --accentMain: rgb(218, 148, 17);
-  --accentDim: rgb(219, 217, 196);
-  --accentDark: rgb(99, 80, 28);
-}
-
 html,
 body {
   margin: 0%;
@@ -177,10 +171,8 @@ section#home img {
 #menu-name-div,
 #gallery-name-div,
 #contact-name-div {
-  /* display: none; */
   width: 20vh;
   height: 20vh;
-  /* background-color: rgb(87, 37, 19); */
   text-align: center;
   text-shadow: 5px 5px 20px black;
   font-size: 3rem;
@@ -440,7 +432,6 @@ section#contact {
 
   #navbar-ul li {
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0);
     height: 40px;
     text-align: center;
     padding: 0px 30px;
@@ -452,7 +443,7 @@ section#contact {
   }
 
   #navbar-ul.active {
-    top: 8.5vh;
+    top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
