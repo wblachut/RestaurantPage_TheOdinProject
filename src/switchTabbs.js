@@ -1,3 +1,5 @@
+import pumpkinImg from './files/pumpkin2.png'
+
 function switchToHome() {
   removeContainerContent();
   const containerDiv = document.getElementById('container');
@@ -14,7 +16,7 @@ function switchToHome() {
   sectionHome.appendChild(pHome);
 
   const imgHome = document.createElement('img');
-  imgHome.src = '/files/pumpkin2.png';
+  imgHome.src = pumpkinImg;
   sectionHome.appendChild(imgHome);
 }
 
@@ -38,7 +40,7 @@ function switchToMenu() {
   const menuList = document.createElement('ul');
   menuList.id = 'menu-list';
   menuList.innerHTML =
-`<img id="img-one" src="/files/seed_green.png"></img>
+`<img id="img-one" src="./files/seed_green.png"></img>
 <ul class="menu-course">
   <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 € </li>
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span></li></ul>
@@ -46,7 +48,7 @@ function switchToMenu() {
   <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 €</li>
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span></li></ul>
 <ul class="menu-course">
-  <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 € <img class="spicy" src="/files/pepper.png"> </li><li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span></li></ul>
+  <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 € <img class="spicy" src="./files/pepper.png"> </li><li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span></li></ul>
 <ul class="menu-course">
   <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 € <img class="vegetarian" src="https://cdn1.iconfinder.com/data/icons/alternate-foods/512/alternate_foods-33-512.png"> </li>
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span></li></ul>
@@ -54,9 +56,9 @@ function switchToMenu() {
   <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 € <img class="vegetarian" src="https://cdn1.iconfinder.com/data/icons/alternate-foods/512/alternate_foods-33-512.png"> </li>
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span><li></ul>
 <ul class="menu-course">
-  <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 €  <img class="vegetarian" src="https://cdn1.iconfinder.com/data/icons/alternate-foods/512/alternate_foods-33-512.png"> <img class="spicy" src="/files/pepper.png"> </li>
+  <li><span class="meal-name">Nullam odio lectus</span> <span class="price"></span>8,00 €  <img class="vegetarian" src="https://cdn1.iconfinder.com/data/icons/alternate-foods/512/alternate_foods-33-512.png"> <img class="spicy" src="./files/pepper.png"> </li>
   <li><span class="ingredients">Pellentesque vitae facilisis dui, eu lacinia libero. In dapibus suscipit turpis, tincidunt placerat eros eleifend at</span><li></ul>
-  <img id="img-two" src="/files/vegetables.png"></img>`;
+  <img id="img-two" src="./files/vegetables.png"></img>`;
   menuBackground.appendChild(menuList);
 }
 
@@ -101,7 +103,7 @@ function switchToContact() {
    <p> Smiling Pumpkin Sq. 87, </p>
    <p>20-77, Novigrad </p></div>
    <div><h1> Call us to make an order ! </h1>
-   <p><img src="/files/phone.png" class="icon"> +48 18 05 2015  </p></div>
+   <p><img src="./files/phone.png" class="icon"> +48 18 05 2015  </p></div>
    <div id="social-media-container">
    <h1> You can find us on </h1><section id="social-medias">
       <a href="#" tag="fb" ><p>Facebook</p> <img src="https://www.flaticon.com/svg/static/icons/svg/733/733547.svg"></a>

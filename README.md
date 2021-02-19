@@ -18,7 +18,8 @@ This is a first `The Odin Project` webpage build with application of webpack. Th
 * DOM manipulation
 * Webpack dev server
 * node_modules
-* page responsiveness
+* mobile responsiveness
+* css variables
 
 
 ## Tools:
@@ -34,3 +35,4 @@ This is a first `The Odin Project` webpage build with application of webpack. Th
 * make a whole new design, fully adaptive to mobile devices
 * implement light and dark mode
 * add nice page transitions especially for switching tabs
+* better tablet responsiveness
